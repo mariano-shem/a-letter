@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<script>
+  function displayYesReply() {
+    const yesText = document.getElementById("yesText");
+    const yesGif = document.getElementById("yesGif");
+    const yesGif2 = document.getElementById("yesGif2");
+    const yesGif3 = document.getElementById("yesGif3");
+    const noText = document.getElementById("noText");
+    const noGif = document.getElementById("noGif");
+    const noBtn = document.getElementById("no-button");
+    yesGif.style.display = "inline";
+    yesGif2.style.display = "inline";
+    yesGif3.style.display = "inline";
+    yesText.style.display = "flex";
+    yesText.style.justifyContent = "center";
+    noGif.style.display = "none";
+    noText.style.display = "none";
+    noBtn.style.display = "none";
+  }
+
+  function displayNoReply() {
+    const noText = document.getElementById("noText");
+    const noGif = document.getElementById("noGif");
+    noGif.style.display = "block";
+    noGif.style.height = "300px";
+    noGif.style.width = "300px";
+    noText.style.display = "flex";
+    noText.style.justifyContent = "center";
+  }
+</script>
+
+<style>
+  body {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 100px;
+    background-color: #fff0db;
+
+  }
+  .yes-button {
+    background-color: #45917b;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.15s;
+  }
+  .yes-front {
+    display: block;
+    font-family: Tahoma;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-image: linear-gradient(to bottom, #5adbb5 0%, #5dbea3 100%);
+    padding: 8px 64px;
+    border-radius: 12px;
+    transform: translateY(-6px);
+  }
+  .yes-button:hover {
+    opacity: 0.8;
+  }
+  .yes-button:active {
+    opacity: 0.8;
+  }
+  .yes-front:active {
+    transform: translateY(-2px);
+  }
+
+  #no-button {
+    background-color: rgb(133, 23, 23);
+    border: none;
+    border-radius: 16px;
+    margin-left: 15px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .nobtn {
+    display: block;
+    font-family: Tahoma;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-image: linear-gradient(to bottom, #ED0800  0%, #cf0c05  100%);
+    padding: 8px 15px;
+    border-radius: 12px;
+    transform: translateY(-6px);
+  }
+  #no-button:hover {
+    opacity: 0.8;
+  }
+  #no-button:active {
+    opacity: 0.5;
+  }
+  .nobtn:active {
+    transform: translateY(-2px);
+  }
+
+  #yesGif {
+    display: none;
+  }
+  #yesGif2 {
+    margin-left: 10px;
+    display: none;
+  }
+  #yesGif3 {
+    margin-left: 10px;
+    display: none;
+  }
+  #yesText {
+    display: none;
+    color: #ff6060;
+    font-size: 50px;
+    margin-bottom: 5px;
+  }
+  #noText {
+    display: none;
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  #noGif {
+    display: none;
+  }
+  .askP {
+    font-family: 'Lobster', sans-serif;
+    color: #ff6060;
+    font-size: 50px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+  }
+</style>
+<head>
+  <title>To Pianne, my baby...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <meta property="og:title" content="To Pianne, my baby..."> 
+  <meta property="og:description" content="HEHEHEHEHE"> 
+  <meta property="og:image" content="https://i.kym-cdn.com/entries/icons/original/000/048/010/side_eye_cat.jpg"> 
+</head>
+<body>
+  <div>
+    <p class="askP">
+      Will you be my Valentine?
+    </p>
+  </div>
+
+  <div class="ynbtn">
+    <button class="yes-button" onclick="displayYesReply()">
+      <span class="yes-front">
+        YES
+      </span>
+    </button>
+    <button id="no-button" onclick="displayNoReply()">
+      <span class="nobtn">
+        NO
+      </span>
+    </button>
+  </div>
+  <div>
+    <p id="yesText">SHE SAID YES!!!</p>
+    <img id="yesGif" src="https://media1.tenor.com/m/sv2Rbc_S71IAAAAd/cats-kiss.gif" alt="my bebe and me cuddling but we're cats">
+    <img id="yesGif2" src="https://media1.tenor.com/m/zyoFkWCY528AAAAd/sweet-sleep.gif" alt="my bebe and me about to kiss but we're cats">
+    <img id="yesGif3" src="https://media1.tenor.com/m/Ao9O4SGI-cQAAAAd/sleep-cat-two-cat.gif" alt="my bebe and me tired so we sleep">
+  </div>
+  <div>
+    <p id="noText">MY HONEST REACTION:</p>
+    <img id="noGif" src="https://media1.tenor.com/m/Wyjcf1uN1AoAAAAd/cat-zoning-out-cat-stare.gif">
+  </div>
+</body>
